@@ -1,0 +1,38 @@
+{
+  "name": "thetestcoder/finance-calculation",
+  "description": "finance calculator package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "The Test Coder",
+      "email": "thetestcoder@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.17",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheTestCoder\\FinanceCalculation\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TheTestCoder\\FinanceCalculation\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "",
+    "test-coverage": "",
+    "format": ""
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "prefer-stable": true
+}
