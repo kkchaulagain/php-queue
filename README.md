@@ -8,13 +8,16 @@ git clone https://github.com/thetestcoder/php-package-structure project-name
 
 1. composer.json
 2. README.md
-3. Licence.md
+3. LICENCE.md
+4. CONTRIBUTING.md (Add Your Email ID)
 
 ## After Changes
 
 1. composer install
 2. start writing code in src directory
-3. test your code in tests directory 4 check hint from existing file
+3. test your code in tests directory
+4. check hint from existing file
+5. just remove from here to top all lines after successfully clone and editing done
 
 ## Installation
 
