@@ -1,11 +1,11 @@
 {
-    "name": "thetestcoder/finance-calculation",
-    "description": "finance calculator package",
+    "name": "vendor-name/package-name",
+    "description": "package description here",
     "license": "MIT",
     "authors": [
         {
-            "name": "The Test Coder",
-            "email": "thetestcoder@gmail.com"
+            "name": "Author Name",
+            "email": "author@email.com"
         }
     ],
     "minimum-stability": "dev",

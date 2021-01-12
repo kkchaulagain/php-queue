@@ -21,10 +21,10 @@ git clone https://github.com/thetestcoder/php-package-structure project-name
 You can install the package via composer:
 
 ```bash
-composer require thetestcoder/finance-calculation
+composer require vendor-name/package-name
 ```
 
-## Usage
+## Usage (Just Like)
 
 ```php
 $calculator = new TheTestCoder\FirstClass();
