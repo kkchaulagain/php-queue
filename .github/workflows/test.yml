@@ -12,7 +12,7 @@ jobs:
         php: [ 7.4 ]
         stability: [ prefer-lowest, prefer-stable ]
 
-    name: P${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
+    name: PHP${{ matrix.php }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
     steps:
       - name: Checkout code
@@ -29,4 +29,4 @@ jobs:
         run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Run test suite
-        run: vendor/bin/phpunit
+        run: compoesr run-script phpunit
