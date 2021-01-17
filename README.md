@@ -25,7 +25,7 @@ git clone https://github.com/thetestcoder/php-package-structure project-name
 2. start writing code in src directory
 3. test your code in tests directory
 4. check hint from existing file
-5. just remove from here to top all lines after successfully clone and editing done
+5. just remove from here to top all lines till Clone Package after successfully clone and editing done
 
 ## Installation
 
