@@ -28,5 +28,5 @@ jobs:
       - name: Install dependencies
         run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
-      - name: Run test suite
+      - name: Run test suite Ubuntu
         run: compoesr run-script phpunit
