@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "TheTestCoder\\FinanceCalculation\\": "src"
+            "TheTestCoder\\PhpPackageStructure\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TheTestCoder\\FinanceCalculation\\": "tests"
+            "TheTestCoder\\PhpPackageStructure\\Tests": "tests"
         }
     },
     "scripts": {

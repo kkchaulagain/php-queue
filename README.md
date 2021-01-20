@@ -18,6 +18,9 @@ git clone https://github.com/thetestcoder/php-package-structure project-name
 2. README.md
 3. LICENCE.md
 4. CONTRIBUTING.md (Add Your Email ID)
+5. CHANGELOG.md  (Add Your package name)
+6. SECURITY.md  (Add Your Email ID)
+7. FUNDING.md
 
 ## After Changes
 
@@ -38,8 +41,8 @@ composer require vendor-name/package-name
 ## Usage (Just Like)
 
 ```php
-$calculator = new TheTestCoder\FirstClass();
-echo $calculator->output('Hey You Done a Great Job!');
+$firstClass = new TheTestCoder\PhpPackageStructure\FirstClass();
+echo $firstClass->output('Hey You Done a Great Job!');
 ```
 
 ## Testing
