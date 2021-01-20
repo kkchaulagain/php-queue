@@ -23,7 +23,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TheTestCoder\\PhpPackageStructure\\Tests": "tests"
+            "TheTestCoder\\PhpPackageStructure\\Tests\\": "tests"
         }
     },
     "scripts": {
