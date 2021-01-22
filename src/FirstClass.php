@@ -4,5 +4,8 @@ namespace TheTestCoder\PhpPackageStructure;
 
 class FirstClass
 {
-    // Start Your Awesome Code....
+    public static function returnTrue(): bool
+    {
+        return true;
+    }
 }

@@ -1,8 +1,7 @@
 .idea
-.php_cs
 .php_cs.cache
 .phpunit.result.cache
-build
+test-reports
 composer.lock
 coverage
 vendor

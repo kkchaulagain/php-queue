@@ -3,12 +3,15 @@
 namespace TheTestCoder\PhpPackageStructure\Tests;
 
 use PHPUnit\Framework\TestCase;
+use TheTestCoder\PhpPackageStructure\FirstClass;
+
 
 class FirstClassTest extends TestCase
 {
     /** @test */
-    public function your_first_test_will_run()
+    public function function_should_return_true()
     {
-        $this->assertTrue(true);
+        $bool = FirstClass::returnTrue();
+        $this->assertTrue($bool);
     }
 }
