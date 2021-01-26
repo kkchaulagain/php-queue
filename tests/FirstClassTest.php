@@ -5,7 +5,6 @@ namespace TheTestCoder\PhpPackageStructure\Tests;
 use PHPUnit\Framework\TestCase;
 use TheTestCoder\PhpPackageStructure\FirstClass;
 
-
 class FirstClassTest extends TestCase
 {
     /** @test */
