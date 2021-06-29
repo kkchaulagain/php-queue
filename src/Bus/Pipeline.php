@@ -1,8 +1,8 @@
 <?php
 
-namespace kkchaulagain\PhpQueue\Bus;
+namespace kkchaulagain\phpQueue\Bus;
 
-use kkchaulagain\PhpQueue\RabbitMQ\RabbitMQ;
+use kkchaulagain\phpQueue\RabbitMQ\RabbitMQ;
 
 class Pipeline
 {
@@ -17,15 +17,14 @@ class Pipeline
         $this->type = $type;
     }
 
-    public function executeMqJobs()
+    public function executeMqJobs($vhost='/')
     {
-        $vhost = 'queue';
 
         $config = [
             'queue' => $this->type,
             'exchange' => $this->type . '.queue.live',
             'vhost' => $vhost,
-            'host' => 'rabbitmq',
+            'host' => 'rabbitmqqueue',
             'user' => 'guest',
             'password' => 'guest'
         ];

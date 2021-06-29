@@ -1,6 +1,6 @@
 <?php
 
-namespace kkchaulagain\PhpQueue\Bus;
+namespace kkchaulagain\phpQueue\Bus;
 class PendingDispatch
 {
 

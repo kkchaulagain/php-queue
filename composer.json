@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "kkchaulagain\\php-queue\\": "src"
+            "kkchaulagain\\phpQueue\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "kkchaulagain\\php-queue\\Tests\\": "tests"
+            "kkchaulagain\\phpQueue\\Tests\\": "tests"
         }
     },
     "scripts": {

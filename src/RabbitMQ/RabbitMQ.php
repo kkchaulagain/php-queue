@@ -1,8 +1,8 @@
 <?php
 
-namespace kkchaulagain\PhpQueue\RabbitMQ;
+namespace kkchaulagain\phpQueue\RabbitMQ;
 
-use kkchaulagain\PhpQueue\Exceptions\ParameterNotFoundException;
+use kkchaulagain\phpQueue\Exceptions\ParameterNotFoundException;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Exchange\AMQPExchangeType;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -66,7 +66,7 @@ class RabbitMQ
             $this->delay = $params['delay'];
             $this->headers[]['x-delay'] = $this->delay;
         }
-
+      
 
         $this->connect();
         $this->prepareChannel();

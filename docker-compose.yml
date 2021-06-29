@@ -23,7 +23,7 @@ services:
         image: rabbitmq:3.8-management
         container_name: rabbitmqQueue
         restart: on-failure
-        hostname: rabbitmq
+        hostname: rabbitmqqueue
         environment:
             RABBITMQ_DEFAULT_USER: "guest"
             RABBITMQ_DEFAULT_PASS: "guest"

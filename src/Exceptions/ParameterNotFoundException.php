@@ -1,6 +1,6 @@
 <?php
 
-namespace  kkchaulagain\PhpQueue\Exceptions;
+namespace  kkchaulagain\phpQueue\Exceptions;
 
 use \Exception;
 

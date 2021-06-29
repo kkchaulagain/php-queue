@@ -1,6 +1,6 @@
 <?php
 
-namespace kkchaulagain\PhpQueue\Bus\traits;
+namespace kkchaulagain\phpQueue\Bus\traits;
 
 /**
  *  This can dispatch an event

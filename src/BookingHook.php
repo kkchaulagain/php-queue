@@ -1,6 +1,6 @@
 <?php
 
-namespace kkchaulagain\PhpQueue;
+namespace kkchaulagain\phpQueue;
 
 class BookingHook extends BaseQueue
 {

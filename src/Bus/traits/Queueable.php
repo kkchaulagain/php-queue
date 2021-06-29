@@ -1,8 +1,8 @@
 <?php
 
-namespace kkchaulagain\PhpQueue\Bus\traits;
+namespace kkchaulagain\phpQueue\Bus\traits;
 
-use kkchaulagain\PhpQueue\RabbitMQ\RabbitMQ;
+use kkchaulagain\phpQueue\RabbitMQ\RabbitMQ;
 
 trait Queueable
 {
@@ -91,10 +91,6 @@ trait Queueable
         $model->payload = $payload;
         $model->reserved_at = $timestamp;
         $model->created_at = $timestamp;
-        if ($this->jobId) {
-            $model->job_id = $this->jobId;
-        }
-        $model->available_at = $this->getAvailableAt($timestamp);
         $this->saveToRabbitMq($model);
     }
 
@@ -102,7 +98,11 @@ trait Queueable
     {
         $data = [
             'queue' => $this->queue,
-            'delay' => $this->delay
+            'delay' => $this->delay,
+            'user'=>'guest',
+            'password'=>'guest',
+            'host'=>'rabbitmqqueue',
+            'port'=>5672
         ];
         RabbitMQ::publishMessage($data, json_encode($payload));
     }

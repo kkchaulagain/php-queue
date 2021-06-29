@@ -1,8 +1,8 @@
 <?php
 
 use kkchaulagain\phpQueue\BookingHook;
+use kkchaulagain\phpQueue\Consumer;
 
 require 'vendor/autoload.php';
 
-
-BookingHook::dispatch(['sad'])->onQueue('test');
+Consumer::consume('test');
