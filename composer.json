@@ -1,11 +1,11 @@
 {
-    "name": "vendor-name/package-name",
-    "description": "package description here",
+    "name": "kkchaulagain/php-queue",
+    "description": "Php rabbit queue",
     "license": "MIT",
     "authors": [
         {
-            "name": "Author Name",
-            "email": "author@email.com"
+            "name": "Kiran CHaulagain",
+            "email": "kkchaulagain@email.com"
         }
     ],
     "minimum-stability": "dev",
@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "TheTestCoder\\PhpPackageStructure\\": "src"
+            "kkchaulagain\\php-queue\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TheTestCoder\\PhpPackageStructure\\Tests\\": "tests"
+            "kkchaulagain\\php-queue\\Tests\\": "tests"
         }
     },
     "scripts": {

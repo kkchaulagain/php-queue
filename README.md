@@ -35,13 +35,13 @@ git clone https://github.com/thetestcoder/php-package-structure project-name
 You can install the package via composer:
 
 ```bash
-composer require vendor-name/package-name
+composer require kkchaulagain/php-queue
 ```
 
 ## Usage (Just Like)
 
 ```php
-$firstClass = new TheTestCoder\PhpPackageStructure\FirstClass();
+$firstClass = new kkchaulagain\phpQueue\FirstClass();
 echo $firstClass->output('Hey You Done a Great Job!');
 ```
 
