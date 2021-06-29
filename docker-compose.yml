@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+    apache:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: php_apache
+        container_name: apache
+        hostname: queue
+        depends_on:
+            - rabbitmq
+        links:
+            - rabbitmq:rabbitmq
+        ports:
+            - 90:80
+        volumes:
+            - ${DOCUMENT_ROOT}:/var/www/html
+        networks:
+            - queue
+ 
+    rabbitmq:
+        image: rabbitmq:3.8-management
+        container_name: rabbitmqQueue
+        restart: on-failure
+        hostname: rabbitmq
+        environment:
+            RABBITMQ_DEFAULT_USER: "guest"
+            RABBITMQ_DEFAULT_PASS: "guest"
+            RABBITMQ_DEFAULT_VHOST: "/"
+        ports:
+            - 5674:5672
+            - 15674:15672
+        volumes:
+            # - ./config/rabbitmq/rabbitmq_definition.json:/etc/rabbitmq/definitions.json
+            - ${DATA_DIR}/rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
+            - ${DATA_DIR}/rabbitmq/logs:/var/log/rabbitmq/log
+        networks:
+            - queue
+networks:
+    queue:
+        driver: "bridge"
+
+
