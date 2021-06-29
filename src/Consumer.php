@@ -6,9 +6,8 @@ use kkchaulagain\phpQueue\Bus\Pipeline;
 
 class Consumer
 {
-    public static function consume($queue)
+    public static function consume($queue,$vhost='/')
     {
-        $vhost='/';
         $pipeline = new Pipeline($queue);
         $pipeline->executeMqJobs($vhost);
     }
