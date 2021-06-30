@@ -1,4 +1,4 @@
-☺<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <phpunit
     backupGlobals="false"
     backupStaticAttributes="false"
@@ -29,4 +29,4 @@
     <logging>
         <junit outputFile="test-reports/report.junit.xml"/>
     </logging>
-</phpunit>♂
+</phpunit>

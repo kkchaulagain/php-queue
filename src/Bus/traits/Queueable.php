@@ -2,6 +2,7 @@
 
 namespace kkchaulagain\phpQueue\Bus\traits;
 
+use kkchaulagain\phpQueue\Exceptions\ParameterNotFoundException;
 use kkchaulagain\phpQueue\RabbitMQ\RabbitMQ;
 
 trait Queueable
@@ -54,6 +55,12 @@ trait Queueable
         return $this;
     }
 
+
+    public function onConnection($connection)
+    {
+        $this->connection = $connection;
+    }
+
     /**
      * Set the desired queue for the job.
      *
@@ -96,13 +103,16 @@ trait Queueable
 
     public function saveToRabbitMq($payload)
     {
+        if (is_null($this->connection)) {
+            throw new ParameterNotFoundException('RabbitMq Connection configuration not found');
+        }
         $data = [
             'queue' => $this->queue,
             'delay' => $this->delay,
-            'user'=>'guest',
-            'password'=>'guest',
-            'host'=>'rabbitmqqueue',
-            'port'=>5672
+            'user' => 'guest',
+            'password' => 'guest',
+            'host' => 'rabbitmqqueue',
+            'port' => 5672
         ];
         RabbitMQ::publishMessage($data, json_encode($payload));
     }
