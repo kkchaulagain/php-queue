@@ -3,7 +3,7 @@
 namespace kkchaulagain\phpQueue\Bus\traits;
 
 /**
- *  This can dispatch an event
+ *  This trait helps to give ability to dispatch the queue
  */
 trait Dispatchable
 {

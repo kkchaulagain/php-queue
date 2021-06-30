@@ -3,6 +3,7 @@
 namespace kkchaulagain\phpQueue;
 
 use kkchaulagain\phpQueue\Bus\Pipeline;
+use kkchaulagain\phpQueue\Exceptions\ParameterNotFoundException;
 
 class Consumer
 {
@@ -10,6 +11,8 @@ class Consumer
     {
         if(array_key_exists('queue',$config)){
             $queue = $config['queue'];
+        }else{
+            throw new ParameterNotFoundException('queue name is required');
         }
         $vhost = $config['vhost']?$config['vhost']:'/';
         $pipeline = new Pipeline($queue);
