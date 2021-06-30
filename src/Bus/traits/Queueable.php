@@ -10,7 +10,7 @@ trait Queueable
     /**
      * The name of the connection the job should be sent to.
      *
-     * @var string|null
+     * @var array|null
      */
     public $connection;
 
@@ -109,10 +109,10 @@ trait Queueable
         $data = [
             'queue' => $this->queue,
             'delay' => $this->delay,
-            'user' => 'guest',
-            'password' => 'guest',
-            'host' => 'rabbitmqqueue',
-            'port' => 5672
+            'user' => $this->connection['user'],
+            'password' => $this->connection['password'],
+            'host' => $this->connection['host'],
+            'port' => $this->connection['port']
         ];
         RabbitMQ::publishMessage($data, json_encode($payload));
     }
