@@ -109,11 +109,9 @@ trait Queueable
         $data = [
             'queue' => $this->queue,
             'delay' => $this->delay,
-            'user' => $this->connection['user'],
-            'password' => $this->connection['password'],
-            'host' => $this->connection['host'],
-            'port' => $this->connection['port']
         ];
+        $data = array_merge($data,$this->connection);
+        
         RabbitMQ::publishMessage($data, json_encode($payload));
     }
 
