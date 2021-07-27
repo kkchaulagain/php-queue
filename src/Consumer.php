@@ -14,8 +14,8 @@ class Consumer
         }else{
             throw new ParameterNotFoundException('queue name is required');
         }
-        $vhost = $config['vhost']?$config['vhost']:'/';
-        $pipeline = new Pipeline($queue);
+        $vhost = isset($config['vhost'])?$config['vhost']:'/';
+        $pipeline = new Pipeline($config);
         $pipeline->executeMqJobs($vhost);
     }
 }

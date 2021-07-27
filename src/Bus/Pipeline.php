@@ -12,21 +12,32 @@ class Pipeline
     public $data, $type;
     public $job;
 
-    public function __construct($type)
+    private $user = 'guest', $password = 'guest', $host = 'rabbitmq', $port = '5672';
+    public function __construct($config)
     {
-        $this->type = $type;
+        $this->type = $config['queue'];
+        if (isset($config['host']))
+            $this->host = $config['host'];
+        if (isset($config['user']))
+            $this->user = $config['user'];
+
+        if (isset($config['port']))
+            $this->port = $config['port'];
+
+        if (isset($config['password']))
+            $this->password = $config['password'];
     }
 
-    public function executeMqJobs($vhost='/')
+    public function executeMqJobs($vhost = '/')
     {
 
         $config = [
             'queue' => $this->type,
             'exchange' => $this->type . '.queue.live',
             'vhost' => $vhost,
-            'host' => 'rabbitmqqueue',
-            'user' => 'guest',
-            'password' => 'guest'
+            'host' => $this->host,
+            'user' => $this->user,
+            'password' => $this->password
         ];
         $callback = function ($msg) {
             try {
