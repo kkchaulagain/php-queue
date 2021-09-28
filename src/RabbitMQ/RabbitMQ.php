@@ -128,12 +128,12 @@ class RabbitMQ
     public function publish()
     {
         $this->channel->basic_publish($this->message, $this->exchange);
+        $this->close();
     }
 
 
     public function close()
     {
-
         $this->channel->close();
         $this->connection->close();
     }
