@@ -3,6 +3,7 @@
 namespace kkchaulagain\phpQueue\RabbitMQ;
 
 use kkchaulagain\phpQueue\Exceptions\ParameterNotFoundException;
+use kkchaulagain\phpQueue\RabbitMQ\Connections\RabbitMQConnection;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Exchange\AMQPExchangeType;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -20,7 +21,7 @@ class RabbitMQ
     private $delay;
     private $headers = [];
     private $vhost = '/';
-
+    public $connection;
 
 
     public function __construct($params)
