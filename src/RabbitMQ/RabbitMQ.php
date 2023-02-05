@@ -66,7 +66,7 @@ class RabbitMQ
             $this->delay = $params['delay'];
             $this->headers[]['x-delay'] = $this->delay;
         }
-      
+
 
         $this->connect();
         $this->prepareChannel();
@@ -74,7 +74,13 @@ class RabbitMQ
 
     public function connect()
     {
-        $this->connection = new AMQPStreamConnection($this->host, $this->port, $this->user, $this->password, $this->vhost);
+        $this->connection = RabbitMQConnection::getInstance([
+            'host' => $this->host,
+            'port' => $this->port,
+            'user' => $this->user,
+            'password' => $this->password,
+            'vhost' => $this->vhost
+        ]);
     }
 
 
