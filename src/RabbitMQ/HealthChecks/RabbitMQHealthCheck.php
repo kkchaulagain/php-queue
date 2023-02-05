@@ -8,11 +8,9 @@ class RabbitMQHealthCheck
 {
     public static function check(array $config)
     {
-        try{
-            $connection = RabbitMQConnection::getInstance($config);
-            return $connection->isConnected();
-        }
-        catch (\Exception $e){
+        try {
+            return RabbitMQConnection::isConnected($config);
+        } catch (\Exception $e) {
             return false;
         }
     }
